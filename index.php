@@ -52,7 +52,10 @@
                     <tr>
                         <td><?php echo $row['name'];?></td>
                         <td><?php echo $row['location'];?></td>
-                        <td></td>
+                        <td>
+                            <a href="index.php?edit=<?php echo $row['id'];?>" class="btn btn-info">Edit</a>
+                            <a href="process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
+                        </td>
                     </tr>
                 <?php }; ?>
             </table>
@@ -67,7 +70,7 @@
         }
         ?>
     </div>
-    
+
     <script src="plugins/bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
     <script src="plugins/jquery-3.6.0.min.js"></script>
 </body>
